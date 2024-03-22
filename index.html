@@ -7,19 +7,24 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="input-container">
-        <h1 class="title">Guess the Word!</h1>
-        <input type="text" id="secret-word" placeholder="Word or phrase the kids will guess!">
-        <button id="start-game">Start Game</button>
-    </div>
-    <div id="game-container" style="display: none;">
-        <div id="word-container">
+    <section class="container">
+
+        <div id="input-container">
+            <h1 class="title">Guess the Word!</h1>
+            <input type="text" id="secret-word" placeholder="Word or phrase the kids will guess!">
+            <button id="start-game">Start Game</button>
         </div>
-        <br>
-        <div id="letters">
+        <div id="game-container" style="display: none;">
+            <div id="word-container">
+            </div>
+            <br>
+            <div id="letters">
+            </div>
+            <button id="return-button">Return</button>
         </div>
-        <button id="return-button">Return</button>
-    </div>
-    <script src="script.js"></script>
+        <audio id="correct-sound" src="./correct.mp3"></audio>
+        <audio id="incorrect-sound" src="./incorrect.mp3"></audio>
+        <script src="script.js"></script>
+    </section>
 </body>
 </html>

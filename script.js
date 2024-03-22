@@ -4,6 +4,8 @@ const gameContainer = document.getElementById("game-container");
 const inputContainer = document.getElementById("input-container");
 const startGameButton = document.getElementById("start-game");
 const returnButton = document.getElementById("return-button");
+const correctSound = document.getElementById("correct-sound");
+const incorrectSound = document.getElementById("incorrect-sound");
 
 let secretWord;
 let remainingLetters;
@@ -24,10 +26,23 @@ function handleLetterClick(event) {
   if (clickedLetter !== " ") { // Ignore clicks on space button
     if (remainingLetters.has(clickedLetter)) {
       remainingLetters.delete(clickedLetter);
+       // ** Play sound for correct guess **
+       correctSound.play();
+       const container = document.querySelector(".container");
+       container.style.backgroundColor = '#B0CB1F';
+       setTimeout(() => {
+         container.style.backgroundColor = 'transparent';
+      }, 1000);
       generateWordDisplay();
       checkWin();
     } else {
-      // Handle incorrect guess (optional: display message)
+       // ** Play sound for incorrect guess **
+       incorrectSound.play();
+       const container = document.querySelector(".container");
+       container.style.backgroundColor = '#990000';
+       setTimeout(() => {
+         container.style.backgroundColor = 'transparent';
+      }, 1000);
     }
   }
 }
@@ -66,6 +81,7 @@ returnButton.addEventListener("click", function() {
   remainingLetters = new Set();
   wordContainer.textContent = "";
   lettersContainer.innerHTML = ""; // Remove letter buttons
+  document.getElementById("secret-word").value = "";
 });
 
 // Initially hide the game elements

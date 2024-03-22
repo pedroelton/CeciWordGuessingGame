@@ -28,6 +28,13 @@ body {
   font-size: 1rem;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
 
 #word-container {
   display: flex;
@@ -82,6 +89,7 @@ body {
   display: block;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   background-color: #ffffffc9;
   padding: 1rem;
 }
