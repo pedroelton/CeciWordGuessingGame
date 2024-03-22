@@ -49,8 +49,13 @@ function handleLetterClick(event) {
 
 function checkWin() {
   if (remainingLetters.size === 0) {
+    setTimeout(() => {
     alert("You guessed the word! Congratulations!");
-    // Reset the game (optional)
+  }, 1000);
+    // Reset the game after a 5-seconds delay
+  // setTimeout(() => {
+  //   returnButton.click(); // Simulate clicking the return button
+  // }, 5000);
   }
 }
 
