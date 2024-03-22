@@ -71,11 +71,15 @@ function createLetterButtons() {
 
 startGameButton.addEventListener("click", function() {
   secretWord = document.getElementById("secret-word").value.toUpperCase();
-  remainingLetters = new Set(secretWord.split(""));
-  gameContainer.style.display = "block";
-  inputContainer.style.display = "none";
-  generateWordDisplay();
-  createLetterButtons();
+  if (secretWord.trim() === "") { // Check for empty or only whitespace
+    alert("Please enter a word or phrase to start the game!");
+  } else {
+    remainingLetters = new Set(secretWord.split(""));
+    gameContainer.style.display = "block";
+    inputContainer.style.display = "none";
+    generateWordDisplay();
+    createLetterButtons();
+  }
 });
 
 returnButton.addEventListener("click", function() {
