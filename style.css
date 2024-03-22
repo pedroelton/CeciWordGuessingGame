@@ -1,0 +1,30 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+
+#word-container {
+  font-size: 24px;
+  letter-spacing: 5px; /* Increase letter spacing for spaces */
+}
+
+#letters button {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+#input-container {
+text-align: left;
+}
+
+#game-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+#return-button {
+margin-top: 10px;
+}
