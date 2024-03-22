@@ -40,7 +40,7 @@ function checkWin() {
 }
 
 function createLetterButtons() {
-  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ "; // Include space as a button
+  const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"; // Include space as a button
   for (let letter of letters) {
     const button = document.createElement("button");
     button.textContent = letter;

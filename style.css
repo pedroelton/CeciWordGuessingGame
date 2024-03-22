@@ -1,30 +1,133 @@
-body {
-  font-family: sans-serif;
-  margin: 20px;
+:root {
+  --primary: #990000;
+  --secondary: #3A519F;
+  --accent: #B0CB1F;
+  --dark: #1b1c1e;
+  --light: #ffffff;
 }
 
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: var(--dark);
+  background-image: url("./img/CeciWallpaper\ test.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 1rem;
+}
+
+
 #word-container {
-  font-size: 24px;
-  letter-spacing: 5px; /* Increase letter spacing for spaces */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  letter-spacing: 0.5rem; /* Increase letter spacing for spaces */
+  margin-bottom: 2rem;
+  background-color: var(--light);
+}
+
+.title {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.4rem;
+  font-weight: 800;
 }
 
 #letters button {
-  margin: 5px;
-  padding: 10px;
-  border: 1px solid #ddd;
+  width: 4rem;
+  height: 4rem;
+  margin: 0.5rem;
+  padding: 1rem;
+  border: 2px solid #00000054;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
   cursor: pointer;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  font-size: 2rem;
+  color: var(--light);
+}
+
+#letters button:active {
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.0);
+  background-color: var(--accent);
+
 }
 
 #input-container {
-text-align: left;
+  display: flex;
+  width: 100%;
+  text-align: center;
+  flex-direction: column;
+  padding: 2rem;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 24rem;
 }
 
 #game-container {
-display: flex;
-flex-direction: column;
-align-items: center;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffffc9;
+  padding: 1rem;
 }
 
 #return-button {
-margin-top: 10px;
+  margin-top: 1rem;
+  display: block;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  border: 0;
+  background-color: var(--secondary);
+  color: var(--light);  
+  text-transform: uppercase;
+}
+
+#start-game {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: 0;
+  background-color: var(--secondary);
+  color: var(--light);  
+  text-transform: uppercase;
+  margin-top: 0.5rem;
+}
+#start-game:hover {
+  background-color: var(--accent);
+  color: var(--dark);
+}
+
+#secret-word {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-size: 1.2rem;
+  border-color: var(--primary);
+}
+
+#game-container {
+  display: flex;
+  max-width: 720px;
+  width: 80vw;
+  flex-wrap: wrap;
 }
