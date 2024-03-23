@@ -143,7 +143,7 @@ body {
 /* Media Queries */
 
 @media (min-width: 320px) and (max-width: 767px) {
-  /* Tablet and smaller devices */
+  /* Small phones */
 
   #word-container {
     font-size: 3rem;
@@ -222,6 +222,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 0rem;
+    margin-top: -10rem;
   }
 }
 
@@ -260,12 +261,8 @@ body {
   }
 }
 
-@media (min-width: 1024px) and (orientation: portrait) {
-  /* Portrait Tablets and Laptops */
-  /* Add your styles for portrait mode here */
-}
-
-@media (min-width: 1024px) and (orientation: landscape) {
-  /* Landscape Desktops */
-  /* Add your styles for landscape desktops here */
+@media (min-width: 2400px) {
+  #game_container {
+    max-height: 80vh;
+  }
 }
