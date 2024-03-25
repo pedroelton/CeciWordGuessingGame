@@ -6,6 +6,7 @@ const startGameButton = document.getElementById("start-game");
 const returnButton = document.getElementById("return-button");
 const correctSound = document.getElementById("correct-sound");
 const incorrectSound = document.getElementById("incorrect-sound");
+const endSound = document.getElementById("end-sound");
 
 let secretWord;
 let remainingLetters;
@@ -50,6 +51,7 @@ function handleLetterClick(event) {
 function checkWin() {
   if (remainingLetters.size === 0) {
     setTimeout(() => {
+      endSound.play();
     alert("You guessed the word! Congratulations!");
   }, 1000);
     // Reset the game after a 5-seconds delay
