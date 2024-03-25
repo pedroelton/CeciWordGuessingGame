@@ -266,3 +266,21 @@ body {
     max-height: 80vh;
   }
 }
+
+footer {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--light);
+  text-align: center;
+  font-size: 0.8rem;
+
+}
+
+footer a {
+  color: var(--primary);
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+
