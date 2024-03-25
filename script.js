@@ -50,14 +50,19 @@ function handleLetterClick(event) {
 
 function checkWin() {
   if (remainingLetters.size === 0) {
-    setTimeout(() => {
-      endSound.play();
-    alert("You guessed the word! Congratulations!");
-  }, 1000);
-    // Reset the game after a 5-seconds delay
-  // setTimeout(() => {
-  //   returnButton.click(); // Simulate clicking the return button
-  // }, 5000);
+    // Get the secret word without spaces
+    const secretWord = document.getElementById("secret-word").value.toUpperCase().replace(/\s/g, "");
+
+    // Filter displayed characters (excluding underscores)
+    const displayedCharacters = wordContainer.textContent.split("").filter(char => char !== "_");
+
+    // Check if all characters (including spaces) match
+    if (displayedCharacters.join("") === secretWord) {
+      setTimeout(() => {
+        endSound.play();
+        alert("You guessed the word! Congratulations!");
+      }, 1000);
+    }
   }
 }
 
