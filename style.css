@@ -77,10 +77,13 @@ body {
   border: 2px solid #00000054;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
   cursor: pointer;
-  background-color: var(--primary);
+  background-color: var(--dark);
   border-radius: 0.5rem;
   font-size: 2rem;
   color: var(--light);
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
 }
 
 .capitalize:active {
@@ -135,6 +138,7 @@ body {
   text-transform: uppercase;
   margin-top: 0.5rem;
 }
+
 #start-game:hover {
   background-color: var(--accent);
   color: var(--dark);
