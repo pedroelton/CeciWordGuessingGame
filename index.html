@@ -1,44 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CECI - Guess the Word Game!</title>
-    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
-    <link rel="stylesheet" href="style.css">
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-GYH4XM9FMZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-GYH4XM9FMZ');
-</script>
-</head>
-<body>
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <section class="container">
-
-        <div id="input-container">
-            <h1 class="title">Guess the Word!</h1>
-            <input type="text" id="secret-word" placeholder="Word or phrase the kids will guess!">
-            <button id="start-game">Start Game</button>
-        </div>
-        <div id="game-container" style="display: none;">
-            <div id="word-container">
-            </div>
-            <br>
-            <div id="letters">
-            </div>
-            <button id="return-button">Return</button>
-        </div>
-        <audio id="incorrect-sound" src="./sounds/incorrect.mp3"></audio>
-        <audio id="correct-sound" src="./sounds/correct.mp3"></audio>
-         <audio id="end-sound" src="./sounds/end.mp3"></audio>
+      <div id="input-container">
+        <h1 class="title">Guess the Word!</h1>
+        <input
+          type="text"
+          id="secret-word"
+          placeholder="Word or phrase the kids will guess!"
+        />
+        <button id="start-game">Start Game</button>
+      </div>
+      <div id="game-container" style="display: none">
+        <div id="word-container"></div>
+        <br />
+        <div id="letters"></div>
+        <button id="return-button">Return</button>
+        <button id="toggle-case" class="capitalize">Aa</button>
+      </div>
+      <audio id="incorrect-sound" src="./sounds/incorrect.mp3"></audio>
+      <audio id="correct-sound" src="./sounds/correct.mp3"></audio>
+      <audio id="end-sound" src="./sounds/end.mp3"></audio>
     </section>
     <footer>
-    <p>By <a href="https://ceci.jp">CECI Educational Academy</a></p>
-</footer>
-        <script src="script.js"></script>
-</body>
+      <p>By <a href="https://ceci.jp">CECI Educational Academy</a></p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
