@@ -146,7 +146,6 @@ returnButton.addEventListener("click", function () {
 toggleCaseButton.addEventListener("click", toggleCase);
 
 gameContainer.style.display = "none";
-<<<<<<< HEAD
 
 // POP-UP
 
@@ -165,5 +164,3 @@ document
       document.getElementById("popupContainer").style.display = "none";
     }
   });
-=======
->>>>>>> 2a7d216049eca35e420aed4cd973811e7feac650
