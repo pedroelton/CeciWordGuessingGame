@@ -162,6 +162,7 @@ body {
   width: 80vw;
   flex-wrap: wrap;
 }
+<<<<<<< HEAD
 footer {
   display: flex;
   align-items: center;
@@ -180,6 +181,8 @@ footer a {
 footer a:hover {
   color: var(--accent);
 }
+=======
+>>>>>>> 2a7d216049eca35e420aed4cd973811e7feac650
 
 /* Media Queries */
 
@@ -305,3 +308,22 @@ footer a:hover {
     max-height: 80vh;
   }
 }
+<<<<<<< HEAD
+=======
+
+footer {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: var(--light);
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+footer a {
+  color: var(--primary);
+}
+
+footer a:hover {
+  color: var(--accent);
+}
+>>>>>>> 2a7d216049eca35e420aed4cd973811e7feac650
