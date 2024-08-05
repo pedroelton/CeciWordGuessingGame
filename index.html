@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CECI - Guess the Word Game!</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+    <link rel="stylesheet" href="popup.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div id="input-container">
+        <h1 class="title">Guess the Word!</h1>
+        <input
+          type="text"
+          id="secret-word"
+          placeholder="Word or phrase the kids will guess!"
+        />
+        <button id="start-game">Start Game</button>
+      </div>
+      <div id="game-container" style="display: none">
+        <div id="word-container"></div>
+        <br />
+        <div id="letters"></div>
+        <button id="return-button">Return</button>
+        <button id="toggle-case" class="capitalize">Aa</button>
+      </div>
+      <audio id="incorrect-sound" src="./sounds/incorrect.mp3"></audio>
+      <audio id="correct-sound" src="./sounds/correct.mp3"></audio>
+      <audio id="end-sound" src="./sounds/end.mp3"></audio>
+    </section>
+    <footer>
+      <p>By <a href="https://ceci.jp">CECI Educational Academy</a></p>
+      <button id="openPopup">Instructions</button>
+      <div id="popupContainer" class="popup-container">
+        <div class="popup">
+          <span id="closePopup" class="close-popup">&times;</span>
+          <h2 class="popup-title">Instructions</h2>
+          <p class="popup-text">
+            The teacher will add a word or phrase secretly and the kids will
+            take turns to pick one letter to guess. ONLY the kid who clicked the
+            last letter can guess, but only if they are sure since the wrong
+            answer will make the kid skipped on the next round.
+          </p>
+          <b>To close this popup, tap outside.</b>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
